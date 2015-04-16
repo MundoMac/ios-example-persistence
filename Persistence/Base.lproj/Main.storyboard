@@ -54,7 +54,7 @@
         <!--CoreData-->
         <scene sceneID="VmA-ha-zua">
             <objects>
-                <viewController id="iZJ-IF-zpf" sceneMemberID="viewController">
+                <viewController id="iZJ-IF-zpf" customClass="CoreDataVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="EIF-ho-UQk"/>
                         <viewControllerLayoutGuide type="bottom" id="q6l-5c-tZd"/>
@@ -62,10 +62,36 @@
                     <view key="view" contentMode="scaleToFill" id="XW4-Nk-uGN">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EjH-Xa-Vwt">
+                                <rect key="frame" x="16" y="70" width="288" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bOD-jF-9Y7">
+                                <rect key="frame" x="143" y="108" width="34" height="30"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="save" destination="iZJ-IF-zpf" eventType="touchUpInside" id="7I2-AC-BPK"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="bOD-jF-9Y7" secondAttribute="centerX" id="1eR-3Q-lqQ"/>
+                            <constraint firstItem="bOD-jF-9Y7" firstAttribute="top" secondItem="EjH-Xa-Vwt" secondAttribute="bottom" constant="8" id="Kbh-ay-wMQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="EjH-Xa-Vwt" secondAttribute="trailing" id="Uja-tm-kth"/>
+                            <constraint firstItem="EjH-Xa-Vwt" firstAttribute="top" secondItem="EIF-ho-UQk" secondAttribute="bottom" constant="50" id="ZsO-uk-jiT"/>
+                            <constraint firstItem="EjH-Xa-Vwt" firstAttribute="leading" secondItem="XW4-Nk-uGN" secondAttribute="leadingMargin" id="hdM-6R-SH2"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="CoreData" id="7Ix-iZ-hyt"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="userEmailTextField" destination="EjH-Xa-Vwt" id="Fnl-8P-sXV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j3w-WA-Bct" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

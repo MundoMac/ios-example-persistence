@@ -14,6 +14,9 @@
 		F12E89FC1AE03AE600710C95 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F12E89FB1AE03AE600710C95 /* Images.xcassets */; };
 		F12E89FF1AE03AE600710C95 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F12E89FD1AE03AE600710C95 /* LaunchScreen.xib */; };
 		F12E8A0B1AE03AE700710C95 /* PersistenceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F12E8A0A1AE03AE700710C95 /* PersistenceTests.m */; };
+		F12E8A4D1AE0440800710C95 /* Persistence.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F12E8A4B1AE0440800710C95 /* Persistence.xcdatamodeld */; };
+		F12E8A571AE0463100710C95 /* CoreDataVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F12E8A561AE0463100710C95 /* CoreDataVC.m */; };
+		F12E8A5D1AE0479F00710C95 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = F12E8A5C1AE0479F00710C95 /* User.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,11 @@
 		F12E8A041AE03AE700710C95 /* PersistenceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PersistenceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F12E8A091AE03AE700710C95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F12E8A0A1AE03AE700710C95 /* PersistenceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersistenceTests.m; sourceTree = "<group>"; };
+		F12E8A4C1AE0440800710C95 /* Persistence.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Persistence.xcdatamodel; sourceTree = "<group>"; };
+		F12E8A551AE0463100710C95 /* CoreDataVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataVC.h; sourceTree = "<group>"; };
+		F12E8A561AE0463100710C95 /* CoreDataVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataVC.m; sourceTree = "<group>"; };
+		F12E8A5B1AE0479F00710C95 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		F12E8A5C1AE0479F00710C95 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,11 +89,11 @@
 		F12E89ED1AE03AE600710C95 /* Persistence */ = {
 			isa = PBXGroup;
 			children = (
+				F12E8A501AE0442900710C95 /* Model */,
+				F12E8A4F1AE0442400710C95 /* View */,
+				F12E8A4E1AE0441F00710C95 /* Controller */,
 				F12E89F21AE03AE600710C95 /* AppDelegate.h */,
 				F12E89F31AE03AE600710C95 /* AppDelegate.m */,
-				F12E89F51AE03AE600710C95 /* ViewController.h */,
-				F12E89F61AE03AE600710C95 /* ViewController.m */,
-				F12E89F81AE03AE600710C95 /* Main.storyboard */,
 				F12E89FB1AE03AE600710C95 /* Images.xcassets */,
 				F12E89FD1AE03AE600710C95 /* LaunchScreen.xib */,
 				F12E89EE1AE03AE600710C95 /* Supporting Files */,
@@ -117,6 +125,35 @@
 				F12E8A091AE03AE700710C95 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F12E8A4E1AE0441F00710C95 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F12E89F51AE03AE600710C95 /* ViewController.h */,
+				F12E89F61AE03AE600710C95 /* ViewController.m */,
+				F12E8A551AE0463100710C95 /* CoreDataVC.h */,
+				F12E8A561AE0463100710C95 /* CoreDataVC.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		F12E8A4F1AE0442400710C95 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F12E89F81AE03AE600710C95 /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		F12E8A501AE0442900710C95 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F12E8A4B1AE0440800710C95 /* Persistence.xcdatamodeld */,
+				F12E8A5B1AE0479F00710C95 /* User.h */,
+				F12E8A5C1AE0479F00710C95 /* User.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,8 +257,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F12E89F71AE03AE600710C95 /* ViewController.m in Sources */,
+				F12E8A4D1AE0440800710C95 /* Persistence.xcdatamodeld in Sources */,
+				F12E8A5D1AE0479F00710C95 /* User.m in Sources */,
 				F12E89F41AE03AE600710C95 /* AppDelegate.m in Sources */,
 				F12E89F11AE03AE600710C95 /* main.m in Sources */,
+				F12E8A571AE0463100710C95 /* CoreDataVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,6 +466,19 @@
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F12E8A4B1AE0440800710C95 /* Persistence.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F12E8A4C1AE0440800710C95 /* Persistence.xcdatamodel */,
+			);
+			currentVersion = F12E8A4C1AE0440800710C95 /* Persistence.xcdatamodel */;
+			path = Persistence.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = F12E89E31AE03AE600710C95 /* Project object */;
 }
