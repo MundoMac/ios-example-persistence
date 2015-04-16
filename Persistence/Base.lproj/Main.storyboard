@@ -5,7 +5,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--NSUserStandarDefaults-->
+        <!--NSUserDefaults-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
@@ -41,7 +41,7 @@
                             <constraint firstItem="dJd-XQ-FyX" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="eBj-mf-Ibj"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="NSUserStandarDefaults" id="tEO-x8-vtT"/>
+                    <tabBarItem key="tabBarItem" title="NSUserDefaults" id="tEO-x8-vtT"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="userEmailTextField" destination="dJd-XQ-FyX" id="dBR-dF-5IS"/>
