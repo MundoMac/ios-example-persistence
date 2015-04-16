@@ -10,18 +10,28 @@
 
 @interface ViewController ()
 
+@property (weak, nonatomic) IBOutlet UITextField *userEmailTextField;
+
 @end
 
 @implementation ViewController
 
-- (void)viewDidLoad {
+#define USER_EMAIL @"user_email"
+
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:USER_EMAIL] != nil) {
+        self.userEmailTextField.text = [[NSUserDefaults standardUserDefaults] stringForKey:USER_EMAIL];
+    }
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)save
+{
+    [[NSUserDefaults standardUserDefaults] setObject:self.userEmailTextField.text forKey:USER_EMAIL];
+    
+    [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 @end
